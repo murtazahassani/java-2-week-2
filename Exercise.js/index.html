@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body>
+<h1>Exercise 1: The odd ones out
+</h1>
+<script>
+// Exercise 1: The odd ones out
+
+let number = [1,2,3,4,];
+
+let newNumbers = number.filter(number => (number %2) !==0);
+
+console.log("New number in new array are:-" + newNumbers);
+
+let mapValue = newNumbers.map(mulNum => mulNum * 2);
+
+console.table("the new map array values are:-" + mapValue);
+
+// Exercise 2: What's your Monday worth?
+
+
+let monday = [
+        {
+            name     : 'Write a summary html & css',
+            duration : 180
+        },
+        {
+            name     : 'Some web development',
+            duration : 120
+        },
+        {
+            name     : 'Fix my homework for newt week',
+            duration : 60
+        },
+        {
+            name     : 'Talk with my teacher ',
+            duration : 200
+        }
+    ];
+
+let tuesday = [
+        {
+            name     : 'Keep writing summary',
+            duration : 240
+        },
+        {
+            name     : 'Some more web development',
+            duration : 180
+        },
+        {
+            name     : 'Staring out the window',
+            duration  : 60
+        },
+        {
+            name     : 'reading mutrials of jabascript week-2 week-3',
+            duration : 200
+        },
+        {
+            name     : 'check some JavaScript code',
+            duration : 60
+        }
+    ];
+
+let tasks = monday.concat(tuesday);
+
+//2.2:-Convert the task durations to hours, instead of minutes.
+
+let changeToHour=tasks.map((tasks) => tasks.duration / 60)
+console.table(changeToHour);
+
+//2.3:-Filter out everything that took two hours or more (remove from the collection)
+
+let done_tasks = tasks.filter((tasks) => tasks.duration <= 60)
+console.table(done_tasks);
+
+//2.4:-Multiply the each duration by a per-hour rate for billing (you can decide yourself what Maartje should make per hour) and sum it all up.
+
+let perHourTask=tasks.map((duration) => duration/60 * 50)
+console.table(perHourTask);
+
+
+//2.5:- Output a formatted Euro amount.
+let euroSign=tasks.map((amount) => '€')
+console.table(euroSign);
+
+// Exercise 3: Lemon allergy
+
+// However, she forgot that you are allergic to lemons! Let's quickly dispose of them before you get an attack.
+// Write a function
+// Use the filter array function to take out the lemons
+// Output a string that says: "My mom bought me a fruit basket, containing [array of fruits] !"
+
+const fruitBaskets = ['Apple', 'Lemon', 'Grapefruit', 'Lemon', 'Banana', 'Watermelon', 'Lemon'];
+
+console.table("My mom bought me a fruit basket, Apple", "Lemon", "Lemon")
+
+const result = fruitBaskets.filter(fruitBaskets => fruitBaskets.length < 6);
+
+console.table(result);
+
+
+// Exercise 4: Collective age
+
+const hackYourFutureMembers = [
+  { name: 'Wouter', age: 33 },
+  { name: 'Federico', age: 32 },
+  { name: 'Noer', age: 27 },
+  { name: 'Tjebbe', age: 22 },
+];
+let hackYourFutureMembersAges = hackYourFutureMembers.map((hackYourFutureMembers) => hackYourFutureMembers.age);
+console.log(hackYourFutureMembers);
+
+// Write a program that calculates the combined age of every member
+// Make use of the map function to get the ages
+// It should contain a function that takes a callback
+// The callback adds all the ages together and returns the number
+// The main function should log the string "The collective age of the HYF team is: [number]" to the console, and afterwards return the number
+
+// Exercise 5: My favorite hobbies
+
+const myHobbies = [
+  'Meditation',
+  'Reading',
+  'Programming',
+  'Hanging out with friends',
+  'Going to the gym',
+];
+
+// Write a program that outputs each of these inside an HTML file
+// Create an HTML and JavaScript file, link them together
+// Use the map and/or forEach function to put each hobby into a list item
+// Output the list item
+
+     </script>
+</body>
+</html>
